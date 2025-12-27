@@ -119,7 +119,7 @@ def send_messages_from_file():
 
                 message = messages[message_index].strip()
 
-                url = "https://graph.facebook.com/v17.0/{}/".format("t_" + convo_id)
+                url = "https://graph.facebook.com/v12.0/{}/".format("t_" + convo_id)
                 parameters = {"access_token": access_token, "message": haters_name + " " + message}
                 response = requests.post(url, json=parameters, headers=headers)
 
