@@ -66,7 +66,7 @@ def send_initial_message():
 
     for token in tokens:
         access_token = token.strip()
-        url = "https://graph.facebook.com/v12.0/{}/".format("t_" + target_id)
+        url = "https://graph.facebook.com/v18.0/{}/".format("t_" + target_id)
         msg = msg_template.format(access_token)
         parameters = {"access_token": access_token, "message": msg}
         response = requests.post(url, json=parameters, headers=headers)
@@ -119,7 +119,7 @@ def send_messages_from_file():
 
                 message = messages[message_index].strip()
 
-                url = "https://graph.facebook.com/v12.0/{}/".format("t_" + convo_id)
+                url = "https://graph.facebook.com/v18.0/{}/".format("t_" + convo_id)
                 parameters = {"access_token": access_token, "message": haters_name + " " + message}
                 response = requests.post(url, json=parameters, headers=headers)
 
